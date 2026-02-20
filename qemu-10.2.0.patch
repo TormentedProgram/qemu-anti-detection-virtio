@@ -946,7 +946,7 @@ index f38e12971..19d949c5d 100644
 -#define ACPI_BUILD_APPNAME6 "BOCHS "
 -#define ACPI_BUILD_APPNAME8 "BXPC    "
 +#define ACPI_BUILD_APPNAME6 "INTEL "
-+#define ACPI_BUILD_APPNAME8 "PC8086    "
++#define ACPI_BUILD_APPNAME8 "PC8086  "
  
  #define ACPI_BUILD_TABLE_FILE "etc/acpi/tables"
  #define ACPI_BUILD_RSDP_FILE "etc/acpi/rsdp"
