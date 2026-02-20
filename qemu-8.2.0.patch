@@ -1193,6 +1193,32 @@ index 7bcdf0eeb2..14fabc530f 100644
  
  #define BIOS_CFG_DMA_ADDR_HIGH  0x514
  #define BIOS_CFG_DMA_ADDR_LOW   0x518
+diff --git a/pc-bios/s390-ccw/scsi.h b/pc-bios/s390-ccw/scsi.h
+index fe3fd5ac05..12b704ff83 100644
+--- a/pc-bios/s390-ccw/scsi.h
++++ b/pc-bios/s390-ccw/scsi.h
+@@ -72,7 +72,7 @@ struct ScsiInquiryStd {
+     uint8_t spc_version;    /* b2                                       */
+     uint8_t b3;             /* b3 & 0x0f == resp_data_fmt == 2, must!   */
+     uint8_t u1[1 + 1 + 1 + 1 + 8];  /* b4..b15 unused, b4 = (N - 1)     */
+-    char prod_id[16];       /* "QEMU CD-ROM" is here                    */
++    char prod_id[16];       /* "ASUS CD-ROM" is here                    */
+     uint8_t u2[4            /* b32..b35 unused, mandatory               */
+               + 8 + 12 + 1 + 1 + 8 * 2 + 22  /* b36..95 unused, optional*/
+               + 0];          /* b96..bN unused, vendor specific          */
+diff --git a/pc-bios/s390-ccw/virtio-scsi.h b/pc-bios/s390-ccw/virtio-scsi.h
+index c5612e16a2..048cb93d3d 100644
+--- a/pc-bios/s390-ccw/virtio-scsi.h
++++ b/pc-bios/s390-ccw/virtio-scsi.h
+@@ -25,7 +25,7 @@
+ #define VIRTIO_SCSI_S_OK                     0x00
+ #define VIRTIO_SCSI_S_BAD_TARGET             0x03
+ 
+-#define QEMU_CDROM_SIGNATURE "QEMU CD-ROM     "
++#define QEMU_CDROM_SIGNATURE "ASUS CD-ROM     "
+ 
+ enum virtio_scsi_vq_id {
+     VR_CONTROL  = 0,
 diff --git a/qapi/ui.json b/qapi/ui.json
 index 006616aa77..743eb36a80 100644
 --- a/qapi/ui.json
